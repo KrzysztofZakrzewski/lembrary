@@ -1,0 +1,12 @@
+name: lem
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - streamlit
+  - python-dotenv
+  - openai=2.14.0
+  - qdrant-client
+  - ipykernel
+
