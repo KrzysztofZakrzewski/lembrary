@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def render_landing_page()->None:
+def render_landing_page()->str:
     st. header('LemLibrary')
 
 
@@ -26,4 +26,6 @@ W bibliotece jest 20 tytółów, ale myslę że zaintresowani znajdą coś dla s
     Do dziś pozostaje jednym z najważniejszych i najbardziej oryginalnych twórców światowej literatury science fiction, a jego dzieła wciąż inspirują naukowców, filozofów, programistów i artystów na całym świecie.'''
         )
 
-    return None
+    user_concepts = st.text_input('Podaj jaki temat Cie interesuje')
+    return user_concepts
+
