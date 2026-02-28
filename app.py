@@ -1,45 +1,65 @@
 import streamlit as st
-import streamlit as st
 from ui.lnadingpage import render_landing_page
-from src.embedings import get_qdrant_client, init_collection, search_books, print_top_result, get_embedding
-from src.embedings import lem_books  # twoja lista książek
+from src.vectorstore import (
+    get_qdrant_client,
+    init_collection,
+    index_books,
+    search_books
+)
 
+#=================
+# SESSION STATE 
+#=================
+
+# --- Query
 if "last_query" not in st.session_state:
     st.session_state["last_query"] = ""
 
+# --- Qdarant client
+if "client" not in st.session_state:
+    # Creates a Qdrant client for working with embedding collections.
+    client = get_qdrant_client(memory=True)
+    # Init collection
+    init_collection(client)
+    # Indexes books into the Qdrant collection by converting them into embeddings
+    index_books(client)
+    # Saves client in session_state
+    st.session_state["client"] = client
+else:
+    # If Qdrat client exist leave it allone
+    client = st.session_state["client"]
 
-from ui.lnadingpage import render_landing_page
-# from src.embedings import *
-client = get_qdrant_client(memory=True)
-init_collection(client, lem_books)
-
+#=================
+# UI
+#=================
+# Renders the landing page UI and returns the user's input query.
 query = render_landing_page()
 
-# -----------------------------
-# Inicjalizacja Qdrant w pamięci
-# -----------------------------
-
-# -----------------------------
-# Landing page + input
-# -----------------------------
-# query = render_landing_page()
-
+# Runs only if the user entered any text
 if query:
+
+    # Stores the current query in session state.
+    st.session_state["last_query"] = query
+
+    # Performs semantic search using vector similarity
+    # and returns the top 3 most relevant results.
     results = search_books(client, query, top_k=3)
 
-    # top wynik
-    top_payload, top_score = results[0]
-    # st.subheader("Top wynik:")
-    # st.write(f"**Tytuł:** {top_payload['name']}")
-    # st.write(f"**Score:** {top_score:.4f}")
+    # Checks if any results were returned.
+    if results:
+        # Retrieves the highest scoring result.
+        top = results[0]
+        # st.subheader("TOP MATCH:")
+        # st.write(top.payload)
+        st.write(f"Score: {top.score:.4f}")
 
     st.subheader("Wszystkie wyniki:")
-    for payload, score in results:
-        st.write(f"**Tytuł książki:** {payload['book']}")
-        st.write(f"**Tytuł powieści:** {payload['name']}")
-        st.write(payload.get("description", "brak opisu"))
-        st.write(f"Score: {score:.4f}")
+    # Iterates through all returned results.
+    for r in results:
+        st.write(f"**Książka:** {r.payload['book']}")
+        st.write(f"**Opowiadanie:** {r.payload['name']}")
+        st.write(r.payload.get("description", "brak opisu"))
+        st.write(f"Score: {r.score:.4f}")
         st.write("---")
-
-# opcjonalnie pokaż ostatnie wyszukiwanie
+# Displays the last user query stored in session state.
 st.write(f"Ostatnie wyszukiwanie: {st.session_state['last_query']}")
