@@ -12,7 +12,8 @@ lem_books = [
                "zmuszając bohaterów do konfrontacji z własną przeszłością, traumą i emocjami. Kelvin musi zmierzyć się "
                "z materializacją swojej zmarłej miłości Harey i z pytaniami o granice poznania, naturę świadomości "
                "oraz niemożność komunikacji z obcą inteligencją.",
-        "genere": "sc-fi, żyjacy ocean, planeta, kontakt z obcą cywilizacją, komunikacja, obcość, świadomość, fantomy, obca forma życia, stacja kosmiczna, orbitowanie",
+        # "genere": "sc-fi, żyjacy ocean, planeta, kontakt z obcą cywilizacją, komunikacja, obcość, świadomość, stacja kosmiczna, miłość, strata",
+        "genere": "kontakt człowieka z niezrozumiałą obcą inteligencją, na planecie żywym oceanie, skupiona na problemach poznania, komunikacji, świadomości oraz ludzkiej traumy i straty miłości.",
         "year": 1895,
     },
     {
@@ -30,7 +31,7 @@ lem_books = [
                 "determinizmu i poznania, pokazując, jak ograniczone są ludzkie modele rozumienia rzeczywistości."
                 "Katar ukazuje świat jako system niezwykle złożonych zależności, w którym granica między chaosem a porządkiem jest płynna"
                 "a racjonalne wyjaśnienia mogą prowadzić do niepokojących wniosków o kruchości ludzkiego życia i iluzoryczności kontroli nad losem.",
-        "genere": "kryminał, przypadek, chemia, śmierć, złożoność, tajemnicze śmierci, kryminał, zbiego okoliczności, determinizm",
+        "genere": "kryminał, przypadek, chemia, morderstwo, tajemnicze śmierci, zbiego okoliczności, determinizm, Neapol",
         "year": 1975,
     },
     {
@@ -44,7 +45,7 @@ lem_books = [
             "jednak jeszcze ważniejszy jest sceptycyzm wobec możliwości wzajemnego poznania:"
             "różnice w technologii sprawiają, że przybysze i miejscowi nie potrafią w pełni się porozumieć,"
             "co podkreśla trudność kontaktu między odmiennymi cywilizacjami.",
-        "genere": "planeta, obca cywilizacja, polityka, Orwel, sc-fi, tyrania, przyroda, opresja, dystopia",
+        "genere": "obca planeta, obca cywilizacja, polityka, Orwel, sc-fi, tyrania, przyroda, opresja, dystopia",
         "year": 1975,
     },
 
@@ -60,7 +61,7 @@ lem_books = [
             "na której bohater musi na nowo zmierzyć się z fundamentalnymi pytaniami o sens egzystencji,"
             "dobro i zło, swobodę i zniewolenie, agresję i miłość. Historia stawia pytania o cenę postępu, naturę człowieczeństwa oraz wartość ryzyka i przygody,"
             "a także pokazuje dramat jednostki przyzwyczajonej do ekstremalnych wyzwań w świecie, który stał się bezpieczny, lecz pozbawiony pasji i głębi.",
-        "genere": "szok kulturowy, powrót, adaptacja, dylatacja czasu, sc-fi, obcość wśród ludzi, nadmierne bezpieczeństwo",
+        "genere": "szok kulturowy, powrót, adaptacja, dylatacja czasu, sc-fi, samotność w tłumie, bezpieczeństwo, miłość, romans",
         "year": 1961,
     },
     
@@ -75,7 +76,7 @@ lem_books = [
             "W odróżnieniu od klasycznej powieści przygodowej, w „Głosie Pana” akcja ustępuje miejsca refleksji, dociekaniom naukowym i filozoficznym."
             "Zmagania uczonych z nieznanym prowokują do zadania pytań o istotę świata, naturę człowieka, granice poznania i kontaktu z obcą inteligencją."
             "Powieść powstała tuż po Solaris i jest popisem literackiego kunsztu Lema, który mistrzowsko łączy napięcie intelektualne z filozoficzną głębią.",
-        "genere": "Kontakt z obcą inteligencją, nauka, neutrina, ponadczasowa wiadomość, naukowcy, kosmos, sygnał, komunikacja, si-fi, roważania o kultuach i religi",
+        "genere": "Kontakt z obcą cywilizacją, nauka, neutrina, ponadczasowa wiadomość, naukowcy, kosmos, sygnał, si-fi, filozofia",
         "year": 1968
     },
     {
@@ -90,7 +91,7 @@ lem_books = [
             "logiczna ani sensowna, a ludzkie dążenie do odkrycia jednej prawdy może być złudzeniem."
             "„Śledztwo” to przenikliwa analiza konfliktu między porządkiem a chaosem, rozumem a przypadkiem, pokazująca, że świat może być nie tyle tajemniczy, co nierozstrzygalny."
             "Powieść podważa fundamenty racjonalizmu i stawia pytanie, czy człowiek jest zdolny do pełnego zrozumienia rzeczywistości.",
-        "genere": "Iluzja porządku, Znikające zwłoki, Chaos zdarzeń,  tajemnica, kryminał, sprzeczności, Londyn",
+        "genere": "Iluzja porządku, Znikające zwłoki, Chaos zdarzeń, tajemnica, kryminał, sprzeczności, Londyn, morderswo",
         "year": 1959,
     },
     {
@@ -105,7 +106,7 @@ lem_books = [
             "Lem ukazuje proces stopniowej utraty złudzeń, konfrontacji ideałów z okrutną rzeczywistością oraz przemiany psychicznej, jakiej ulega młody lekarz w obliczu wojny i zagrożenia eksterminacją pacjentów."
             "Powieść jest przejmującą refleksją nad naturą zła, przypadkowością losu, odpowiedzialnością moralną oraz kruchością ludzkiej cywilizacji,"
             "pozbawioną fantastyki, a jednocześnie nasyconą filozoficzną głębią charakterystyczną dla całej twórczości Lema.",
-        "genere": "Druga Wojna Światowa, Dojrzewanie, Lekarze, psychiatria, człowieczeństwo, etyka,",
+        "genere": "Druga Wojna Światowa, dojrzewanie, lekarze, pacjęci, psychiatria, człowieczeństwo, etyka, losy wojene",
         "year": 1955,
     },
     {
@@ -137,7 +138,7 @@ lem_books = [
             "Groteska i humor stopniowo ustępują miejsca refleksji nad kondycją ludzkiego poznania, naturą informacji,"
             "iluzją sensu oraz bezradnością jednostki wobec systemów, które sama stworzyła."
             "„Pamiętnik znaleziony w wannie” to jednocześnie satyra polityczna, filozoficzna parabola i egzystencjalny traktat o zagubieniu człowieka w świecie znaków.",
-        "genere": "Totalitaryzm i biurokracja, Zagubienie jednostki, Labirynt biurokratyczny, Paranoja i nieufność, szpiegostwo, symbole i znaki, labirynt",
+        "genere": "Totalitaryzm i biurokracja, Zagubienie jednostki, Labirynt biurokratyczny, tajni agenci, szpiegostwo, labirynt, paranoja",
         "year": 1961,
     },
     {
@@ -173,6 +174,7 @@ lem_books = [
             "To podkreśla ciężar i realistyczny charakter przygotowań do międzygwiezdnej wyprawy w świecie jego opowieści."
             "Powieść stawia pytania o granice eksploracji kosmosu, moralność kontaktu z obcym, rolę technologii i sztucznej inteligencji, a także o sens działania człowieka wobec niepojętego świata.",
         "genere": "Egzo sztielet, sztuczna inteligencja, Sokrates, kosmos, podróż między-gwiezdna, obca cywilizacja, komunikacja z obcą cywilizacją, hibernacja, AI, dylatacja czasu, porażka",
+        "genere": "AI, sztuczna inteligencja, Sokrates, podróż kosmiczna, obca cywilizacja, kontakt z obcymi, hibernacja, dylatacja czasu, duże roboty",
         "year": 1978,
     },
     {
@@ -190,7 +192,7 @@ lem_books = [
             "Motto historii brzmi: 'Nie wszystko i nie wszędzie jest dla nas."
             "'Całkowicie odmieny klimat minionej epoki PRL wpleciony w przyszłość. Lem inteligentnie bawi się słowem, tworząc takie twory jak „Nekrosfera”,"
             "które jednocześnie oddają obcość, mechaniczność i kolektywną naturę spotkanej inteligencji.",
-        "genere": "nano robty, kontak obcą cywlizacją, planeta, układ andromedy, podróż kosmiczna, krążownik kosmiczny, tajemnica, zaginiona załoga, misja ratunkowa, sceny batalistyczne, eksplozje, energia nuklearna, energia atomowa,",
+        "genere": "nano robty, kontak obcą cywlizacją, obca planeta, układ andromedy, podróż kosmiczna, krążownik kosmiczny, misja ratunkowa, sceny batalistyczne, eksplozje, energia nuklearna, energia atomowa,",
         "year": 1978,
     },
     {
@@ -201,7 +203,7 @@ lem_books = [
         "Podczas symulacji Pirks staje przed szeregiem coraz bardziej złożonych i nieprzewidywalnych sytuacji, które wymagają od niego nie tylko sprawności technicznej,"
         "ale też logicznego myślenia i kreatywności. Symulator nie tylko mierzy standardowe umiejętności pilotażu, ale też obserwuje jego sposób myślenia pod presją."
         "A wszystkie jego działania kżyżuje mucha...",
-        "genere": "Pirx, science fiction, pilot, test, mucha, przygoda, odwaga, humor, owad, insekt",
+        "genere": "Pirx, science fiction, pilot, test, mucha, przygoda, odwaga, humor, owady, insekty, zaradność",
         "year": 1966,
     },
     {
@@ -210,7 +212,7 @@ lem_books = [
         "name": "Patrol",
         "description": "opowiadające o śledztwie w sprawie zaginięcia dwóch kosmonautów, Thomasa i Wilmera."
         "Pirx zostaje wysłany na rutynowy patrol w ten sam sektor, gdzie odkrywa, że przyczyną katastrofy było tajemnicze światełko...",
-        "genere": "Pirxi, science fiction, światełko, realizm techniczny, odpowiedzialność, ciekawość, zaginięcie, patrol, kosmos, układ słoneczny",
+        "genere": "Pirx, science fiction, światełko, technologia, odpowiedzialność, ciekawość, zaginieni kosmonałci, patrol, kosmos, układ słoneczny",
         "year": 1966,
     },
     {
@@ -221,7 +223,7 @@ lem_books = [
             "Pirx wraca na Ziemię z Marsa i aklimatyzuje się do spokojnej podróży."
             "W trakcie lotu statek odbiera sygnał SOS od innego statku o nazwie „Albatros”, który znajduje się w bardzo poważnych tarapatach — jego reaktor uległ awarii i grozi katastrofa."
             "Na pomoc rusza kilka statków, w tym Tytan i inne jednostki kosmiczne, które kierują się w stronę zaginionego Albatrosa, starając się uratować jego załogę",
-        "genere": "Pirx, science fiction, filozofia, komfort, luxus, odwaga, bezsilność, misja ratunkowa",
+        "genere": "Pirx, science fiction, filozofia, komfort, luxus, odwaga, bezsilność, ratowanie pasażerów",
         "year": 1966,
     },
     {
@@ -231,7 +233,7 @@ lem_books = [
         "description": "Pirx, dowodząc starym statkiem, odkrywa robota Terminusa,"
             "który przechowuje w pamięci tragiczne wspomnienia załogi zmarłej 19 lat wcześniej,"
             "co prowadzi do rozważań o granicach człowieczeństwa i pamięci.",
-        "genere": "Pirx, science fiction, filozofia, etyka, robot, smutek, śmierć",
+        "genere": "Pirx, science fiction, filozofia, etyka, robot, smutek, śmierć, glicze",
         "year": 1966,
     },
     {
