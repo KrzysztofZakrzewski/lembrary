@@ -149,7 +149,7 @@ def index_books(client: QdrantClient):
 
 
 
-def search_books(client: QdrantClient, query: str, top_k: int = 3):
+def search_books(client: QdrantClient, query: str, top_k: int = 2):
     vector = get_embedding(query)
 
     '''

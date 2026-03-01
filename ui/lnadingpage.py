@@ -1,14 +1,19 @@
 import streamlit as st
+import os
+import base64
+
+from ui.media import render_loop_video
+
+
+video_path = "assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem_movie.mp4"
+image_path = "assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg"
 
 
 def render_landing_page()->str:
     st. header('LemLibrary')
-
-
-
     st.text('''
         LemLibrary to projekt stworzony z pasji do twórczości Stanisława Lema. Jako fan jego książek, stworzyłem interaktywną „lemotekę”, która przy pomocy embeddingów i wyszukiwania semantycznego pomaga odkrywać dzieła Lema na podstawie tematów, pytań i zainteresowań użytkownika.
-W bibliotece jest 20 tytółów, ale myslę że zaintresowani znajdą coś dla siebie.''')
+        W bibliotece jest 20 tytółów, ale myslę że zaintresowani znajdą coś dla siebie.''')
 
 
 
@@ -16,7 +21,15 @@ W bibliotece jest 20 tytółów, ale myslę że zaintresowani znajdą coś dla s
     col1, col2 = st.columns([1, 2])  # proporcje szerokości: 1:2
 
     with col1:
-        st.image("assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg", width=300)
+
+        if os.path.exists(video_path):
+            render_loop_video("assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem_movie.mp4")
+        else:
+
+            st.image(image_path, width=300)
+        # st.image("assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg", width=300)
+
+        # else: st.video("https://www.youtube.com/watch?v=6-4KkZx4f_w", with=300)
 
     with col2:
         st.header("Stanisław Lem")

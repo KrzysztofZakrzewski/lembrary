@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from ui.lnadingpage import render_landing_page
 from src.vectorstore import (
     get_qdrant_client,
@@ -58,6 +59,13 @@ if query:
     for r in results:
         st.write(f"**Książka:** {r.payload['book']}")
         st.write(f"**Opowiadanie:** {r.payload['name']}")
+        #show the image
+        image_path = r.payload.get("image")
+
+        if image_path and os.path.exists(image_path):
+            st.image(image_path, width="stretch")
+
+        
         st.write(r.payload.get("description", "brak opisu"))
         st.write(f"Score: {r.score:.4f}")
         st.write("---")

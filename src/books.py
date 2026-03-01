@@ -15,6 +15,7 @@ lem_books = [
         # "genere": "sc-fi, żyjacy ocean, planeta, kontakt z obcą cywilizacją, komunikacja, obcość, świadomość, stacja kosmiczna, miłość, strata",
         "genere": "kontakt człowieka z niezrozumiałą obcą inteligencją, na planecie żywym oceanie, skupiona na problemach poznania, komunikacji, świadomości oraz ludzkiej traumy i straty miłości.",
         "year": 1895,
+        "image": "assets/pictures/solaris.jpg"
     },
     {
         "id": 2,
@@ -33,6 +34,7 @@ lem_books = [
                 "a racjonalne wyjaśnienia mogą prowadzić do niepokojących wniosków o kruchości ludzkiego życia i iluzoryczności kontroli nad losem.",
         "genere": "kryminał, przypadek, chemia, morderstwo, tajemnicze śmierci, zbiego okoliczności, determinizm, Neapol",
         "year": 1975,
+        "image": "assets/pictures/katar.jpg"
     },
     {
         "id": 3,
@@ -47,6 +49,7 @@ lem_books = [
             "co podkreśla trudność kontaktu między odmiennymi cywilizacjami.",
         "genere": "obca planeta, obca cywilizacja, polityka, Orwel, sc-fi, tyrania, przyroda, opresja, dystopia",
         "year": 1975,
+        "image": "assets/pictures/eden.jpg"
     },
 
     {
@@ -63,6 +66,7 @@ lem_books = [
             "a także pokazuje dramat jednostki przyzwyczajonej do ekstremalnych wyzwań w świecie, który stał się bezpieczny, lecz pozbawiony pasji i głębi.",
         "genere": "szok kulturowy, powrót, adaptacja, dylatacja czasu, sc-fi, samotność w tłumie, bezpieczeństwo, miłość, romans",
         "year": 1961,
+        "image": "assets/pictures/powrót_z_gwiazd.jpg"
     },
     
     {
@@ -77,7 +81,8 @@ lem_books = [
             "Zmagania uczonych z nieznanym prowokują do zadania pytań o istotę świata, naturę człowieka, granice poznania i kontaktu z obcą inteligencją."
             "Powieść powstała tuż po Solaris i jest popisem literackiego kunsztu Lema, który mistrzowsko łączy napięcie intelektualne z filozoficzną głębią.",
         "genere": "Kontakt z obcą cywilizacją, nauka, neutrina, ponadczasowa wiadomość, naukowcy, kosmos, sygnał, si-fi, filozofia",
-        "year": 1968
+        "year": 1968,
+        "image": "assets/pictures/glos.jpg"
     },
     {
         "id": 6,
@@ -93,6 +98,7 @@ lem_books = [
             "Powieść podważa fundamenty racjonalizmu i stawia pytanie, czy człowiek jest zdolny do pełnego zrozumienia rzeczywistości.",
         "genere": "Iluzja porządku, Znikające zwłoki, Chaos zdarzeń, tajemnica, kryminał, sprzeczności, Londyn, morderswo",
         "year": 1959,
+        "image": "assets/pictures/sledztwo.jpg"
     },
     {
         "id": 7,
@@ -108,6 +114,7 @@ lem_books = [
             "pozbawioną fantastyki, a jednocześnie nasyconą filozoficzną głębią charakterystyczną dla całej twórczości Lema.",
         "genere": "Druga Wojna Światowa, dojrzewanie, lekarze, pacjęci, psychiatria, człowieczeństwo, etyka, losy wojene",
         "year": 1955,
+        "image": "assets/pictures/szpital.jpg"
     },
     {
         "id": 8,
@@ -123,6 +130,7 @@ lem_books = [
             "- Stanisław Lem",
         "genere": "satyra, komedia, groteska, antyutopia, parodia futurologii i technoutopii, czarny humor, ironia, wyśmiewanie polityków propagandy ideologóœ ",
         "year": 1974,
+        "image": "assets/pictures/kongres.jpg"
     },
     {
         "id": 9,
@@ -140,6 +148,7 @@ lem_books = [
             "„Pamiętnik znaleziony w wannie” to jednocześnie satyra polityczna, filozoficzna parabola i egzystencjalny traktat o zagubieniu człowieka w świecie znaków.",
         "genere": "Totalitaryzm i biurokracja, Zagubienie jednostki, Labirynt biurokratyczny, tajni agenci, szpiegostwo, labirynt, paranoja",
         "year": 1961,
+        "image": "assets/pictures/pamiętnik_znaleziony_w_wannie.jpg"
     },
     {
         "id": 10,
@@ -156,6 +165,7 @@ lem_books = [
             "naturą rozumu i przyszłości w świecie coraz bardziej rządzonym przez algorytmy.",
             "genere": "Wenętrzy dialog, sztuczna inteligencja, super komputer, transcendencja umysłu, umysł, poznanie, człowiek, algorytmy, inteligęcja, świadomość, Golem, AI",
         "year": 1978,
+        "image": "assets/pictures/golem_vix.jpg"
     },
     {
         "id": 11,
@@ -176,6 +186,7 @@ lem_books = [
         "genere": "Egzo sztielet, sztuczna inteligencja, Sokrates, kosmos, podróż między-gwiezdna, obca cywilizacja, komunikacja z obcą cywilizacją, hibernacja, AI, dylatacja czasu, porażka",
         "genere": "AI, sztuczna inteligencja, Sokrates, podróż kosmiczna, obca cywilizacja, kontakt z obcymi, hibernacja, dylatacja czasu, duże roboty",
         "year": 1978,
+        "image": "assets/pictures/fiasko.jpg"
     },
     {
         "id": 12,
@@ -194,6 +205,7 @@ lem_books = [
             "które jednocześnie oddają obcość, mechaniczność i kolektywną naturę spotkanej inteligencji.",
         "genere": "nano robty, kontak obcą cywlizacją, obca planeta, układ andromedy, podróż kosmiczna, krążownik kosmiczny, misja ratunkowa, sceny batalistyczne, eksplozje, energia nuklearna, energia atomowa,",
         "year": 1978,
+        "image": "assets/pictures/niezwyciezony.jpg"
     },
     {
         "id": 14,
@@ -205,6 +217,7 @@ lem_books = [
         "A wszystkie jego działania kżyżuje mucha...",
         "genere": "Pirx, science fiction, pilot, test, mucha, przygoda, odwaga, humor, owady, insekty, zaradność",
         "year": 1966,
+        "image": "assets/pictures/test.jpg"
     },
     {
         "id": 15,
@@ -212,8 +225,9 @@ lem_books = [
         "name": "Patrol",
         "description": "opowiadające o śledztwie w sprawie zaginięcia dwóch kosmonautów, Thomasa i Wilmera."
         "Pirx zostaje wysłany na rutynowy patrol w ten sam sektor, gdzie odkrywa, że przyczyną katastrofy było tajemnicze światełko...",
-        "genere": "Pirx, science fiction, światełko, technologia, odpowiedzialność, ciekawość, zaginieni kosmonałci, patrol, kosmos, układ słoneczny",
+        "genere": "Pirx, science fiction, technologia, odpowiedzialność, ciekawość, zaginieni kosmonałci, patrol, kosmos",
         "year": 1966,
+        "image": "assets/pictures/patrol.jpg"
     },
     {
         "id": 16,
@@ -225,6 +239,7 @@ lem_books = [
             "Na pomoc rusza kilka statków, w tym Tytan i inne jednostki kosmiczne, które kierują się w stronę zaginionego Albatrosa, starając się uratować jego załogę",
         "genere": "Pirx, science fiction, filozofia, komfort, luxus, odwaga, bezsilność, ratowanie pasażerów",
         "year": 1966,
+        "image": "assets/pictures/albatros.jpg"
     },
     {
         "id": 17,
@@ -235,6 +250,7 @@ lem_books = [
             "co prowadzi do rozważań o granicach człowieczeństwa i pamięci.",
         "genere": "Pirx, science fiction, filozofia, etyka, robot, smutek, śmierć, glicze",
         "year": 1966,
+        "image": "assets/pictures/terminus.jpg"
     },
     {
         "id": 18,
@@ -248,6 +264,7 @@ lem_books = [
             "więc Pirx początkowo nie podnosi broni, wiedząc, że bez przewagi taktycznej nie miałby szans przeciwko niemu...",
         "genere": "Pirx, science fiction, akcja, lasery, robot, AI, eksplozje, pojedynek, walka",
         "year": 1966,
+        "image": "assets/pictures/polowanie.jpg"
     },
     {
         "id": 19,
@@ -259,6 +276,7 @@ lem_books = [
             "Pirx musi zmierzyć się nie tylko z zagrożeniem technicznym, lecz także z psychologiczną grą, w której stawką jest życie ludzi i przyszłość lotów kosmicznych.",
         "genere": "Pirx, science fiction, android, sztuczny człowiek, robot, AI, gra psychologiczna, pojedynek umysłów, ludzka niedoskonałość, napięcie, przyszłe losy, intuicja, korporacje",
         "year": 1966,
+        "image": "assets/pictures/rozprawa.jpg"
     },
     {
         "id": 20,
@@ -272,5 +290,6 @@ lem_books = [
         "Lem posługuje się groteską, absurdem i ironią,",
         "genere": "Ijon Tichy, satyra, komedia, humor, absurd, ośmieszanie, krzywe zwierciadło, karykaturalna, komedia",
         "year": 1966,
+        "image": "assets/pictures/dzienniki_gwiazdowe.jpg"
     }
 ]
