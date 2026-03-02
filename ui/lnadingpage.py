@@ -27,9 +27,7 @@ def render_landing_page()->str:
         else:
 
             st.image(image_path, width=300)
-        # st.image("assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg", width=300)
-
-        # else: st.video("https://www.youtube.com/watch?v=6-4KkZx4f_w", with=300)
+        st.text('1966_rakieta_©_by_Tomasz_Lem')
 
     with col2:
         st.header("Stanisław Lem")
@@ -42,3 +40,9 @@ def render_landing_page()->str:
     user_concepts = st.text_input('Podaj jaki temat Cie interesuje')
     return user_concepts
 
+
+def render_foot():
+
+    with st.expander("Credits"):
+        st.write("Photo: 1966_rakieta_©_by_Tomasz_Lem")
+        st.write('Taken from: https://instytutpolski.pl/minsk/pl/stanislaw-lem-zyciorys/')

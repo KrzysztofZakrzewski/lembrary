@@ -1,11 +1,16 @@
 import streamlit as st
 import os
-from ui.lnadingpage import render_landing_page
+from ui.lnadingpage import render_landing_page, render_foot
 from src.vectorstore import (
     get_qdrant_client,
     init_collection,
     index_books,
     search_books
+)
+
+st.set_page_config(
+    page_title="LemLibrary",
+    page_icon="🪐",
 )
 
 #=================
@@ -71,3 +76,9 @@ if query:
         st.write("---")
 # Displays the last user query stored in session state.
 st.write(f"Ostatnie wyszukiwanie: {st.session_state['last_query']}")
+
+
+
+
+render_foot()
+
