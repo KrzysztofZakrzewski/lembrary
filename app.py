@@ -8,6 +8,8 @@ from src.vectorstore import (
     search_books
 )
 
+from src.translation_ai import translate_text, normalize_language, render_books
+
 st.set_page_config(
     page_title="LemLibrary",
     page_icon="🪐",
@@ -35,15 +37,111 @@ else:
     # If Qdrat client exist leave it allone
     client = st.session_state["client"]
 
+# --- Language
+if "language" not in st.session_state:
+    st.session_state.language = None
+
+
+
+lang = st.session_state.language
+
+
+
+
+if st.session_state.language is None:
+    st.markdown("## 🌍 ")
+    st.markdown(
+        """
+        ᓂᕈᐊᕐᓗᒍ ᐅᖃᐅᓯᖅ
+
+        Ko cusku lo bangu
+
+        Wybierz język
+        
+        Select language
+
+        选择语言
+        
+        Seleccionar idioma
+        
+        भाषा चुने
+        
+        выберите язык
+        
+        sélectionner la langue 
+        """
+    )
+
+    user_lang_input = st.text_input(
+        "⬇️"
+    )
+    if user_lang_input:
+        normalized = normalize_language(user_lang_input)
+        if normalized == "unknown":
+            st.error("ᐅᖃᐅᓯᖅ ᐃᓕᑕᕆᔭᐅᓯᒪᙱᑦᑐᖅ. ᐆᑦᑐᑲᓐᓂᕆᑦ.")
+        else:
+            st.session_state.language = normalized
+            st.rerun()
+    st.stop()
+
+
+
+
+
+
+# if st.session_state.language is None:
+
+#     col1, col2, col3 = st.columns([1, 2, 1])
+
+#     with col2:
+#         st.markdown("## 🌍")
+
+#         st.markdown("""
+#         ᓂᕈᐊᕐᓗᒍ ᐅᖃᐅᓯᖅ  
+#         **Wybierz język**  
+#         Select language  
+#         选择语言  
+#         Seleccionar idioma  
+#         भाषा चुने  
+#         выберите язык  
+#         sélectionner la langue
+#         """)
+
+#         user_lang_input = st.text_input(
+#             "",
+#             placeholder="Type your language..."
+#         )
+
+#         if user_lang_input:
+#             normalized = normalize_language(user_lang_input)
+#             if normalized == "unknown":
+#                 st.error("ᐅᖃᐅᓯᖅ ᐃᓕᑕᕆᔭᐅᓯᒪᙱᑦᑐᖅ. ᐆᑦᑐᑲᓐᓂᕆᑦ.")
+#             else:
+#                 st.session_state.language = normalized
+#                 st.rerun()
+
+#     st.stop()
+
 #=================
 # UI
 #=================
 # Renders the landing page UI and returns the user's input query.
 query = render_landing_page()
 
+
+
+if query:
+    st.session_state["last_query"] = query
+
+    top_books = search_books(client, query)
+
+    render_books(top_books)
+
+
 # Runs only if the user entered any text
 if query:
 
+    lang = st.session_state.language
     # Stores the current query in session state.
     st.session_state["last_query"] = query
 
@@ -59,23 +157,36 @@ if query:
         # st.write(top.payload)
         st.write(f"Score: {top.score:.4f}")
 
-    st.subheader("Wszystkie wyniki:")
+    st.subheader(translate_text("Wszystkie wyniki:", lang))
     # Iterates through all returned results.
     for r in results:
-        st.write(f"**Książka:** {r.payload['book']}")
-        st.write(f"**Opowiadanie:** {r.payload['name']}")
-        #show the image
+    #     st.write(f"**{translate_text('Książka:', lang)}** {translate_text(r.payload['book'], lang)}")
+    #     st.write(f"**{translate_text('Opowiadanie:', lang)}** {translate_text(r.payload['name'], lang)}")
+    #     #show the image
         image_path = r.payload.get("image")
 
-        if image_path and os.path.exists(image_path):
-            st.image(image_path, width="stretch")
+    if image_path and os.path.exists(image_path):
+        st.image(image_path, width="stretch")
 
-        
-        st.write(r.payload.get("description", "brak opisu"))
-        st.write(f"Score: {r.score:.4f}")
-        st.write("---")
+    
+    description = r.payload.get("description", "brak opisu")
+    st.write(translate_text(description, lang))
+    st.write(f"Score: {r.score:.4f}")
+    st.write("---")
+    # st.write("DEBUG results:", len(results))
+
+
+
+
+
 # Displays the last user query stored in session state.
-st.write(f"Ostatnie wyszukiwanie: {st.session_state['last_query']}")
+if "last_query" in st.session_state:
+    lang = st.session_state.language
+
+    translated_label = translate_text("Ostatnie wyszukiwanie:", lang)
+
+    st.write(f"{translated_label} {st.session_state['last_query']}")
+
 
 
 
