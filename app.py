@@ -99,46 +99,6 @@ if query:
     # displays results (books)
     render_books(top_books)
 
-
-# Runs only if the user entered any text
-# if query:
-
-#     lang = st.session_state.language
-#     # Stores the current query in session state.
-#     st.session_state["last_query"] = query
-
-#     # Performs semantic search using vector similarity
-#     # and returns the top 3 most relevant results.
-#     results = search_books(client, query, top_k=2)
-
-#     # Checks if any results were returned.
-#     if results:
-#         # Retrieves the highest scoring result.
-#         top = results[0]
-#         # st.subheader("TOP MATCH:")
-#         # st.write(top.payload)
-#         # st.write(f"Score: {top.score:.4f}")
-
-#     # st.subheader(translate_text("Wszystkie wyniki:", lang))
-#     # Iterates through all returned results.
-#     for r in results:
-#     #     st.write(f"**{translate_text('Książka:', lang)}** {translate_text(r.payload['book'], lang)}")
-#     #     st.write(f"**{translate_text('Opowiadanie:', lang)}** {translate_text(r.payload['name'], lang)}")
-#     #     #show the image
-#         image_path = r.payload.get("image")
-
-
-#     if image_path and os.path.exists(image_path):
-#         st.image(image_path, width="stretch")
-
-    
-#     description = r.payload.get("description", "brak opisu")
-#     st.write(translate_text(description, lang))
-#     # st.write(f"Score: {r.score:.4f}")
-#     st.write("---")
-
-#     st.write("DEBUG results:", len(results))
-
 # Displays the last user query stored in session state.
 if "last_query" in st.session_state:
     lang = st.session_state.language
