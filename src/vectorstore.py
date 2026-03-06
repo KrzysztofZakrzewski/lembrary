@@ -1,82 +1,23 @@
-# from qdrant_client import QdrantClient
-# from qdrant_client.models import PointStruct, VectorParams, Distance
-
-# EMBEDDING_DIM = 1536
-
-# EMBEDDING_MODEL = "text-embedding-3-small"
-# QDRANT_COLLECTION_NAME = "lem_books"
-
-
-# def get_qdrant_client(memory=True):
-#     url = ":memory:" if memory else "qdrant.db"
-#     client = QdrantClient(url)
-#     return client
-
-
-# def init_collection(client, books):
-#     """
-#     Tworzy kolekcję i wstawia książki, jeśli kolekcja nie istnieje
-#     """
-#     if not client.collection_exists(collection_name=QDRANT_COLLECTION_NAME):
-#         # print("Tworzę kolekcję")
-#         client.create_collection(
-#             collection_name=QDRANT_COLLECTION_NAME,
-#             vectors_config=VectorParams(size=EMBEDDING_DIM, distance=Distance.COSINE),
-#         )
-
-#         points = [
-#             PointStruct(
-#                 id=idx,
-#                 vector=get_embedding(f'{book["name"]} {book.get("genere","")}'),
-#                 payload=book
-#             )
-#             for idx, book in enumerate(books)
-#         ]
-
-#         client.upsert(
-#             collection_name=QDRANT_COLLECTION_NAME,
-#             points=points
-#         )
-
-
-# def search_books(client, query, top_k=1):
-#     """
-#     Szuka w kolekcji Qdrant po embeddingu query
-#     Zwraca listę payloadów (książki)
-#     """
-#     q_emb = get_embedding(query)
-#     results = client.search(
-#         collection_name=QDRANT_COLLECTION_NAME,
-#         query_vector=q_emb,
-#         limit=top_k
-#     )
-#     # zwracamy listę tuple: (payload, score)
-#     return [(r.payload,
-#             r.score)
-#             for r in results]
-
-
-# def print_top_result(results):
-#     """
-#     Prosty helper do pokazania wyniku w konsoli
-#     """
-#     if results:
-#         top = results[0]
-#         print('TYTUŁ:', top["name"])
-#         print('KSIĄŻKA:', top["book"])
-#         print('OPIS FABUŁY:', top.get('description', 'brak'))
-#         print('GENRE:', top.get("genere", "brak"))
-
-
+# ================
+# IMPORTS
+# ================
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 
+# ================
+# INER IMPORTS
+# ================
 from src.embeddings import get_embedding, EMBEDDING_DIM
 from src.books import lem_books
 
+# --- Create books colection name
 QDRANT_COLLECTION_NAME = "lem_books"
 
+# ================
+# FUNCTIONS
+# ================
 
+# --- Get Qdrant Client
 def get_qdrant_client(memory: bool = True):
     '''
     Creates a Qdrant client for working with embedding collections.

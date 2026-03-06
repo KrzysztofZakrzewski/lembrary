@@ -1,14 +1,25 @@
+# ================
+# IMPORTS
+# ================
 import streamlit as st
 import os
-import base64
+# import base64
 
+# ================
+# INER IMPORTS
+# ================
 from ui.media import render_loop_video
 from src.translation_ai import translate_text
 
-
+# ================
+# PATHS
+# ================
 video_path = "assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem_movie.mp4"
 image_path = "assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg"
 
+# ================
+# WEB TEXT
+# ================
 intro_text = 'LemLibrary to projekt stworzony z pasji do twórczości Stanisława Lema. Jako fan jego książek, stworzyłem interaktywną „lemotekę”, która przy pomocy embeddingów i wyszukiwania semantycznego pomaga odkrywać dzieła Lema na podstawie tematów, pytań i zainteresowań użytkownika. ' \
 'W bibliotece jest 20 tytółów, ale myslę że zaintresowani znajdą coś dla siebie.'
 
@@ -19,9 +30,21 @@ lem_bio = '''(1921–2006) był jednym z najwybitniejszych pisarzy science ficti
 
 subjects = 'Podaj jaki temat Cie interesuje'
 
+# ================
+# FUNCTIONS
+# ================
+
+# --- LANDING PAGE
+# """
+# Renders the landing page of the application.
+
+# The function translates the page content into the user's selected language,
+# displays a video or image of Stanisław Lem in the first column,
+# and shows the translated biography in the second column.
+
+# Returns the search query entered by the user.
+# """
 def render_landing_page()->str:
-
-
     lang = st.session_state.language
 
     translated_intro = translate_text(intro_text, lang)
@@ -31,8 +54,8 @@ def render_landing_page()->str:
     st. header('LemLibrary')
     st.text(translated_intro)
 
-    # Tworzymy dwie kolumny
-    col1, col2 = st.columns([1, 2])  # proporcje szerokości: 1:2
+    # 2 columns
+    col1, col2 = st.columns([1, 2])  # proportion of columns: 1:2
 
     with col1:
 
@@ -50,7 +73,7 @@ def render_landing_page()->str:
     user_concepts = st.text_input(translated_subjects)
     return user_concepts
 
-
+# --- RENDER FOOT
 def render_foot():
 
     with st.expander("Credits"):

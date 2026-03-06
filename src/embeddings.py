@@ -1,3 +1,6 @@
+# ================
+# IMPORTS
+# ================
 from dotenv import dotenv_values
 from openai import OpenAI
 
@@ -6,7 +9,9 @@ env = dotenv_values(".env")
 EMBEDDING_DIM = 1536
 EMBEDDING_MODEL = "text-embedding-3-small"
 
-
+# ================
+# FUNCTIONS
+# ================
 def get_openai_client():
     return OpenAI(api_key=env["OPENAI_API_KEY"])
 
