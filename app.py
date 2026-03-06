@@ -71,9 +71,11 @@ if st.session_state.language is None:
         sélectionner la langue 
         """
     )
-    st.markdown("## ⬇️ ")
+    st.markdown("## ⬇️")
     user_lang_input = st.text_input(
-        "."
+    "Language",
+    # placeholder="polski / english / español / 中文 ..."
+    label_visibility="collapsed",
     )
     if user_lang_input:
         normalized = normalize_language(user_lang_input)
