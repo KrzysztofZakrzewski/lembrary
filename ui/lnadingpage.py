@@ -79,3 +79,6 @@ def render_foot():
     with st.expander("Credits"):
         st.write("Photo: 1966_rakieta_©_by_Tomasz_Lem")
         st.write('Taken from: https://instytutpolski.pl/minsk/pl/stanislaw-lem-zyciorys/')
+        st.write('About author: https://krzysztofzakrzewski.github.io/portfolio/')
+        st.write('linkedin: https://www.linkedin.com/in/krzysztof-zakrzewski-206554258/')
+        st.write('github: https://github.com/KrzysztofZakrzewski')
