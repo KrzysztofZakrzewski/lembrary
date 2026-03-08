@@ -14,8 +14,8 @@ from src.translation_ai import translate_text
 # ================
 # PATHS
 # ================
-video_path = "assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem_movie.mp4"
-image_path = "assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg"
+video_path = "assets/main/St_Lem_resize_video.mp4"
+image_path = "assets/main/St_Lem_resize.jpg"
 
 # ================
 # WEB TEXT
@@ -60,11 +60,13 @@ def render_landing_page()->str:
     with col1:
 
         if os.path.exists(video_path):
-            render_loop_video("assets/main/1966_rakieta-778x1024-1©_by_Tomasz_Lem_movie.mp4")
+            render_loop_video("assets/main/St_Lem_resize_video.mp4")
         else:
 
             st.image(image_path, width=300)
-        st.text('1966_rakieta_©_by_Tomasz_Lem')
+        st.text('Stanisław Lem in 1966')
+        st.text("Author: Courtesy of Lem's secretary, Wojciech Zemek. Resize and digital processing by Masur.")
+        st.text("Sorce: https://commons.wikimedia.org/wiki/File:St_Lem_resize.jpg")
 
     with col2:
         st.header("Stanisław Lem")
@@ -77,8 +79,9 @@ def render_landing_page()->str:
 def render_foot():
 
     with st.expander("Credits"):
-        st.write("Photo: 1966_rakieta_©_by_Tomasz_Lem")
-        st.write('Taken from: https://instytutpolski.pl/minsk/pl/stanislaw-lem-zyciorys/')
+        st.write('Stanisław Lem in 1966')
+        st.write("Author: Courtesy of Lem's secretary, Wojciech Zemek. Resize and digital processing by Masur.")
+        st.write("Sorce: https://commons.wikimedia.org/wiki/File:St_Lem_resize.jpg")
         st.write('About author: https://krzysztofzakrzewski.github.io/portfolio/')
         st.write('linkedin: https://www.linkedin.com/in/krzysztof-zakrzewski-206554258/')
         st.write('github: https://github.com/KrzysztofZakrzewski')
