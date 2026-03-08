@@ -3,6 +3,7 @@
 # ================
 from dotenv import dotenv_values
 from openai import OpenAI
+import os
 
 env = dotenv_values(".env")
 
@@ -13,7 +14,7 @@ EMBEDDING_MODEL = "text-embedding-3-small"
 # FUNCTIONS
 # ================
 def get_openai_client():
-    return OpenAI(api_key=env["OPENAI_API_KEY"])
+    return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 def get_embedding(text: str) -> list[float]:
