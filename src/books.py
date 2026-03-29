@@ -18,7 +18,7 @@ lem_books = [
                "oraz niemożność komunikacji z obcą inteligencją.",
         # "genere": "sc-fi, żyjacy ocean, planeta, kontakt z obcą cywilizacją, komunikacja, obcość, świadomość, stacja kosmiczna, miłość, strata",
         "genere": "kontakt człowieka z niezrozumiałą obcą inteligencją, na planecie żywym oceanie, skupiona na problemach poznania, komunikacji, świadomości oraz ludzkiej traumy i straty miłości.",
-        "year": 1895,
+        "year": 1961,
         "image": "assets/pictures/solaris.jpg"
     },
     {
