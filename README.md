@@ -7,7 +7,7 @@ and interests they provide.
 
 The library currently contains 20 titles, but I believe fans of Lem will still find
 something interesting to explore.
-
+tree -F
 ## Features
 
 - Semantic search for Stanisław Lem books
@@ -54,6 +54,30 @@ flowchart TD
     H --> I[Translate UI and descriptions to selected language]
 ```
 
+## Architecture
+```mermaid
+.
+├── app.py
+├── assets
+│   ├── main
+│   │   ├── 1966_rakieta-778x1024-1©_by_Tomasz_Lem.jpg
+│   │   └── 1966_rakieta-778x1024-1©_by_Tomasz_Lem_movie.mp4
+│   └── pictures
+|       └── pisc.jpg
+├── develop-eggs
+|
+├── Dockerfile
+├── README.md
+├── requirements.txt
+├── src
+│   ├── books.py
+│   ├── embeddings.py
+│   ├── translation_ai.py
+│   └── vectorstore.py
+└── ui
+    ├── lnadingpage.py
+    └── media.py
+```
 
 ## Stanisław Lem
 
