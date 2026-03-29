@@ -77,6 +77,7 @@ if st.session_state.language is None:
     # placeholder="polski / english / español / 中文 ..."
     label_visibility="collapsed",
     )
+    st.markdown("<br><br><br><br><br>", unsafe_allow_html=True)
     if user_lang_input:
         normalized = normalize_language(user_lang_input)
         if normalized == "unknown":
@@ -112,3 +113,4 @@ if "last_query" in st.session_state:
 # RENDER FOOt WITH CREDITS
 render_foot()
 
+st.markdown("<br><br><br><br><br>", unsafe_allow_html=True)
